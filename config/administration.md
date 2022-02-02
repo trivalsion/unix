@@ -141,6 +141,38 @@
 
 
 
+# Security
+* **ON INTERNET-FACING**(the ones that could be accessed from the internet) servers additional security measures should be taken: `Disable password login through ssh, leaving the ability to login only through private-public key pair`, `Enable the firewall to block access to all ports except the needed ones(SSH, and also HTTP in case of a web server)`, `Change the SSH port from the default "22" to some other one(e.g. 56747 or any other radnom one) so automatic SSH scanners couldn't reach it`, `Enable fail2ban so it would block any suspicious repeated connection attempts`
+* **NEVER** install a graphics server(XORG, Wayland) or desktop environment(gnome, kde) on a server as it increases fail and attack surface, increases load on the server, drastically increases amount of installed packages and creates bloat folders(e.g. Documents, Downloads...) in users' home directories which isn't needed on the server as it isn't a personal computer
+* **NEVER** use linux as the `root` user as it can cause serious problems sometimes, instead issue commands with `sudo <command>` from a user added to the sudo group. If the system only has the root user and no sudo users, create a new user and add him to the sudo group, otherwise use the already existing user that has sudo priviledges.
+* Apply all updates once in a while to make sure all latest security fixes are applied(sudo apt update && sudo apt upgrade && sudo apt autoremove)
+* Do not download any strange files or programs onto the server and if possible download programs only from the official repos
+* [Security Checklist](https://github.com/lfit/itpol)
+
+
+## Do not use root user
+1. Login as root - `su`
+2. Create a new user - `adduser <username>`
+3. Add the new user to the sudo group - `usermod -a -G sudo <username>`
+
+
+## Harden SSH
+1. Open `/etc/ssh/sshd_config` in a text editor and make sure these settings are present and look like they do here(uncomment, change or add these lines otherwise):
+	*	```sh
+		PermitRootLogin no
+
+		AddressFamily inet # only add this if you want to disable login attempts from IPv6 addresses
+		PasswordAuthentication no # ONLY add this if you have setup a private/public key pair to log into the server
+		```
+2. Resart SSH service after making the changes - `sudo systemctl restart sshd`
+
+
+## Remove unused network-facing services(especially remove unsafe ones like FTP or TELNET)
+1. Get the list of network-facing listening services - `sudo netstat -tunlp`
+2. Remove the unused ones - `sudo apt purge <program_name>`
+
+
+
 # Server Maintnance
 ## List proccesses that are listening for incoming network connections(acting as servers)
 *   ```sh
@@ -172,6 +204,9 @@
 	sudo smartctl -i /dev/<sdX> # prints the information about the drive and tells if it supports SMART
 	sudo smartctl -s <on/off> -d /dev/<sdX> # enable/disable(-s on/off) SMART on the selected drive(-d <drive>)
 	sudo smartctl -d ata -H /dev/sdb # run an overall health self-check(-H <drive>) of the drive, -d option selects the type of the drive(mostly it is "ata" and "nvme" for nvme ssds)
+
+	sudo smartctl -t <short/long> /dev/<sdX> # run a SMART long(can take multiple hours) or short self-test(-t short/long) on specified drive; the test is run in the background so a seperate command is needed to view the results
+	sudo -l selftest /dev/<sdX> # view the results of the SMART self-test on the specified drive
 	```
 
 
@@ -186,10 +221,3 @@
 ## General Recommendations
 * Remove dotfiles and dotdirectories(e.g. .file) after removing an application
 * Remove bloat/unused applications that aren't a vital part of the OS
-
-
-## Security
-* [Security Checklist](https://github.com/lfit/itpol)
-* **Never** install a graphics server(XORG, Wayland) or desktop environment(gnome, kde) on a server as it increases fail and attack surface, increases load on the server, drastically increases amount of installed packages and creates bloat folders(e.g. Documents, Downloads...) in users' home directories which isn't needed on the server as it isn't a personal computer
-* Update kernel and all packages once in a while to make sure all security fixes are applied(sudo apt update && sudo apt upgrade && sudo apt autoremove)
-* Do not download any strange files or programs onto the server
