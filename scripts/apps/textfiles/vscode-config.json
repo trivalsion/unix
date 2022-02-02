@@ -1,0 +1,27 @@
+{
+    "__FILE_DESCRIPTION__" : "contains visual stduo code settings",
+    
+    "files.trimTrailingWhitespace" : true,
+    "files.trimFinalNewlines" : true,
+
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.codeLens": false,
+    "explorer.openEditors.visible": 0,
+    "editor.emptySelectionClipboard": false,
+    
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4,
+    
+    "workbench.startupEditor": "none",
+    "zenMode.fullScreen": false,
+    "workbench.statusBar.visible": false,
+    "window.titleBarStyle" : "custom",
+    
+    "security.workspace.trust.enabled": false,
+    "files.associations" : {
+		"Makefile.inc" : "makefile",
+	}
+}
