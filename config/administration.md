@@ -142,12 +142,14 @@
 
 
 # Security
+* Large Resources/Tutorials
+	* [Security Checklist](https://github.com/lfit/itpol)
+	* [How to Secure A Linux Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server)
 * **ON INTERNET-FACING**(the ones that could be accessed from the internet) servers additional security measures should be taken: `Disable password login through ssh, leaving the ability to login only through private-public key pair`, `Enable the firewall to block access to all ports except the needed ones(SSH, and also HTTP in case of a web server)`, `Change the SSH port from the default "22" to some other one(e.g. 56747 or any other radnom one) so automatic SSH scanners couldn't reach it`, `Enable fail2ban so it would block any suspicious repeated connection attempts`
 * **NEVER** install a graphics server(XORG, Wayland) or desktop environment(gnome, kde) on a server as it increases fail and attack surface, increases load on the server, drastically increases amount of installed packages and creates bloat folders(e.g. Documents, Downloads...) in users' home directories which isn't needed on the server as it isn't a personal computer
 * **NEVER** use linux as the `root` user as it can cause serious problems sometimes, instead issue commands with `sudo <command>` from a user added to the sudo group. If the system only has the root user and no sudo users, create a new user and add him to the sudo group, otherwise use the already existing user that has sudo priviledges.
 * Apply all updates once in a while to make sure all latest security fixes are applied(sudo apt update && sudo apt upgrade && sudo apt autoremove)
 * Do not download any strange files or programs onto the server and if possible download programs only from the official repos
-* [Security Checklist](https://github.com/lfit/itpol)
 
 
 ## Do not use root user
