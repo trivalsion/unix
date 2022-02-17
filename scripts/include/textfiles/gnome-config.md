@@ -19,8 +19,8 @@
 * Backgorund`(Set a background)`
 * Notifications`(OFF)`
 * Search`(OFF)`
-* Privacy -> Everything`(OFF)`, except Blank Screen Delay`(5 Min)`, Automatic Screen Lock`(ON)`, Automatic Screen Lock Delay`(Screen Turns Off)`
-* Power -> Automatic suspend`(ON)`, Blank screen`(ON)`, Dim when inactive`(ON)`, Automatic Brightness`(OFF)`
+* Privacy -> Everything`(OFF)`, except Blank Screen Delay`(5 minutes)`, Automatic Screen Lock`(ON)`, Automatic Screen Lock Delay`(Screen Turns Off)`
+* Power -> Automatic suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`, Screen Blank`(5 minutes)`, Dim Screen`(ON)`, Automatic Screen Brightness`(OFF)`
 * Keyboard -> Customize Shortcuts
 	* Navigation
 		* Switch to workspace x`(Super + x/Super + Alt + x)`
