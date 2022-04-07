@@ -3,7 +3,7 @@
 
 
 ## Variables ##
-apps_list="terminator vlc nano python3 binutils clang cmake make nasm" # firefox(install it with a seperate dnf/apt command as firefox package may have a different name and fail)
+apps_list="terminator nano python3 binutils clang make nasm" # firefox(install it with a seperate dnf/apt command as firefox package may have a different name and fail)
 dirs_list="$HOME/git-repos $HOME/vm/iso $HOME/vm/vms"
 include_dir=./include
 textfiles_dir=$include_dir/textfiles

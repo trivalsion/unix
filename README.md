@@ -1,4 +1,10 @@
 # Scripts
+## Using the repo
+1. Run the `scripts/main.sh` script and answer all of it's prompts to configure a UNIX system
+2. Check if everything `main.sh` prints out in "Done" section in it's output, was done by it
+3. Read and do other recommendations printed after script has finished(e.g. run dev.sh script)
+
+
 ## Repository Layout
 * `config` folder - contains notes telling about configuring different very specific parts of the system
 * `scripts` folder - contains scripts to configure the system
