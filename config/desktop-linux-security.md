@@ -17,3 +17,8 @@
 * Use an application(binaries/executables) permission controler for all applications
 	* [SELinux - strongest kernel built-in app permission controller](https://selinuxproject.org/page/Main_Page)
 	* [AppArmour - an easier kernel built-in app permission controller](https://apparmor.net/)
+
+
+
+# Resources
+* [Comparitech - Desktop Linux Security Guide](https://www.comparitech.com/blog/information-security/linux-security-guide/)
