@@ -11,6 +11,12 @@
 
 
 
+# Regular ToDos
+* Update the repos and the system regularly(e.g. `sudo dnf update` or `sudo apt update && sudo apt upgrade`)
+	* After each update run an autoremover(e.g. `sudo dnf autoremove` or `sudo apt autoremove`) to autodelete packages and dependencies that are no longer needed by the system or other packages(and can bloat the system or cause security problems)
+
+
+
 # Application security
 * Install non-essential applications as flatpaks as it sandboxes them and also makes their removal easier
 	* [FlatPak](https://flatpak.org/)

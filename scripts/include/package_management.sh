@@ -31,6 +31,14 @@ fi
 ## Config for DNF ##
 if [ "$current_pm" == dnf ]
     then
+		# Updating Fedora to a new release
+			# Updating Fedora to a new release(e.g. Fedora 35 to F36) without re-installing, official guide - https://docs.fedoraproject.org/en-US/quick-docs/upgrading/
+				# Updating using CLI, official guide - https://docs.fedoraproject.org/en-US/quick-docs/dnf-system-upgrade/
+				# Non-official update guide - https://itsfoss.com/upgrade-fedora-version/
+			# RPM Fusion will update automatically and does not require any manualy action to update when moving between Fedora releases
+				# Reddit thread 1 - https://www.reddit.com/r/Fedora/comments/lrxvak/rpm_fusion_and_fedora_version_upgrades/
+				# Reddit thread 2 - https://www.reddit.com/r/Fedora/comments/bhbrv7/rpmfusion_question/
+
         # Update
         sudo dnf -y update
 

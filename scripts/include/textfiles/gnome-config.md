@@ -1,13 +1,6 @@
 ## Tweaks(Package/App name - `gnome-tweaks`)
-* General -> Suspend when laptop lid is closed`(ON)`, Animations`(OFF)`
+* General -> Suspend when laptop lid is closed`(ON)`
 * Appearance
-    * Applications`(Adwaita-dark)`
-      * On ubuntu the shell theme also needs to be changed
-         1. Terminal -> sudo apt install gnome-shell-extensions
-         2. Log out and Log In from Ubuntu
-         3. Gnome Tweaks -> Extensions(ON) -> User Themes(ON)
-         4. Restart Gnome Tweaks
-         5. Gnome Tweaks -> Appearance -> Shell(Yaru-dark)
     * Cursor`(Adwaita/DMZ-Black)`
     * Icons`(Adwaita)`
 * Keyboard & mouse -> *On Laptop:*Mouse click emulation`(Area)`
@@ -17,6 +10,7 @@
 
 ## Settings
 * Backgorund`(Set a background)`
+* Appearance -> Style`(Dark)`
 * Notifications`(OFF)`
 * Search`(OFF)`
 * Privacy -> Everything`(OFF)`, except Blank Screen Delay`(5 minutes)`, Automatic Screen Lock`(ON)`, Automatic Screen Lock Delay`(Screen Turns Off)`
@@ -38,6 +32,7 @@
 * Removable Media
   * Set everything to `Do nothing`
   * Never prompt or start programs on media insertion`(ON)`
+* Accessibility -> Enable Animations`(OFF)`
 * Default Applications`(Set default apps)`
 
 
