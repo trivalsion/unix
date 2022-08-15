@@ -2,6 +2,7 @@
 ## Remove unused network-facing services(especially remove unsafe ones like FTP or TELNET)
 1. Get the list of network-facing listening services - `sudo netstat -tunlp`
 2. Remove the unused ones - `sudo apt purge <program_name>`
+	* Importantly always remove SSH server(`openssh-server` package on most systems) from all systems that won't be used as servers because SSH server could allow remote access to the computer
 
 
 ## Do not use root user
