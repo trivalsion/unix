@@ -1,4 +1,9 @@
 # Hardening system
+## During system installation
+1. During the installation of the system, all of the internal disks of the computer should always be encrypted with full-disk encryption(e.g. LUKS).
+	* Ubuntu, Fedora, Debian and other large distros provide the ability to do a full-disk encryption of selected drives right in the installer.
+
+
 ## Remove unused network-facing services(especially remove unsafe ones like FTP or TELNET)
 1. Get the list of network-facing listening services - `sudo netstat -tunlp`
 2. Remove the unused ones - `sudo apt purge <program_name>`
