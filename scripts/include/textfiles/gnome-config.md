@@ -9,12 +9,20 @@
 
 
 ## Settings
-* Backgorund`(Set a background)`
-* Appearance -> Style`(Dark)`
+* Appearance
+	* Style`(Dark)`
+	* Backgorund`(Set a background)`
 * Notifications`(OFF)`
 * Search`(OFF)`
-* Privacy -> Everything`(OFF)`, except Blank Screen Delay`(5 minutes)`, Automatic Screen Lock`(ON)`, Automatic Screen Lock Delay`(Screen Turns Off)`
-* Power -> Automatic suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`, Screen Blank`(5 minutes)`, Dim Screen`(ON)`, Automatic Screen Brightness`(OFF)`
+* Privacy -> Everything`(OFF)`, except: 
+	* Blank Screen Delay`(5 minutes)`
+	* Automatic Screen Lock`(ON)`
+	* Automatic Screen Lock Delay`(Screen Turns Off)`
+* Power
+	* Automatic suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
+	* Screen Blank`(5 minutes)`
+	* Dim Screen`(ON)`
+	* Automatic Screen Brightness`(OFF)`
 * Keyboard -> Customize Shortcuts
 	* Navigation
 		* Switch to workspace x`(Super + x/Super + Alt + x)`
@@ -30,8 +38,8 @@
 		* terminator`(Ctrl + Alt + T)`
 		* gnome-system-monitor`(Ctrl + Shift + Esc)`
 * Removable Media
-  * Set everything to `Do nothing`
-  * Never prompt or start programs on media insertion`(ON)`
+	* Set everything to `Do nothing`
+	* Never prompt or start programs on media insertion`(ON)`
 * Accessibility -> Enable Animations`(OFF)`
 * Default Applications`(Set default apps)`
 
@@ -40,5 +48,6 @@
 1. Remove unneeded pre-installed gnome apps using gnome software app
 2. Pin most important applications to the taskbar
 3. In the launchpad/app menu, sort all apps into folders: put bloat into `bloat` folder, user installed apps into `apps` folder and other system stuff into `utilities`
+4. By default the laptop shouldn't shutdown if it is closed when connected to power and monitor on most modern linux distros(even if it would shutdown in all other cases when the lid is closed), but if it does, then the "Gnome Tweaks -> General -> Suspend when laptop lid is closed`(ON)`" setting should be set to `Off` while working on a monitor with the laptop connected to power and closed
 * Starting from GNOME 40, add/remove extensions using gnome-extensions-app
-* To add desktop icons: Extensions App->Enable Extensions; [Install desktop icons extension](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
+* To add desktop icons: Extensions App->Enable Extensions; [Install desktop icons extension](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 
