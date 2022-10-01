@@ -87,7 +87,7 @@ echo "
     - On MacOS - binutils diffutils nasm gdb nano cask mpv qemu geany code transmission iterm2 vbox firefox
 2. Following directories were made - $dirs_list
 3. Only on Linux:
-	- No terminal application was installed, so instead the pre-installed terminal apps of the desktop environments should be used(Gnome Terminal on Gnome and Konsole on KDE(and other QT desktop environments)). Make sure to apply appropriate configuration to these default terminal apps according to the instructions given in the --- DE GUI Configuration --- above
+	- No terminal application was installed, so instead the pre-installed terminal apps of the desktop environments should be used(Gnome Terminal on Gnome and Konsole on KDE(and other QT desktop environments)). Make sure to apply appropriate configuration to these default terminal apps according to the instructions given in the --- DE GUI Configuration --- section above
     - Unneeded default XDG directories were removed(hidden)
     - PS1 variable was changed
 4. Only on MacOS
@@ -96,7 +96,7 @@ echo "
 --- To do manually ---
 1. Go to the scripts/apps in root of this repo and run the needed configuration scripts
 2. Go to scripts/misc in the root of this repo and run dev.sh if it is a software development machine
-3. Configure the GUI using the information given in the --- DE GUI Configuration --- above
+3. Configure the GUI using the information given in the --- DE GUI Configuration --- section above
 4. Remove unneeded pre-installed applications(e.g. gnome cheese)
 5. Virtualization
     1. Install QEMU-KVM Virt-Manger
