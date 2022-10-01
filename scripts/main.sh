@@ -3,7 +3,7 @@
 
 
 ## Variables ##
-apps_list="terminator nano python3 binutils clang make nasm" # firefox(install it with a seperate dnf/apt command as firefox package may have a different name and fail)
+apps_list="nano python3 binutils clang make nasm" # firefox(install it with a seperate dnf/apt command as firefox package may have a different name and fail)
 dirs_list="$HOME/git-repos $HOME/vm/iso $HOME/vm/vms"
 include_dir=./include
 textfiles_dir=$include_dir/textfiles
@@ -87,6 +87,7 @@ echo "
     - On MacOS - binutils diffutils nasm gdb nano cask mpv qemu geany code transmission iterm2 vbox firefox
 2. Following directories were made - $dirs_list
 3. Only on Linux:
+	- No terminal application was installed, so instead the pre-installed terminal apps of the desktop environments should be used(Gnome Terminal on Gnome and Konsole on KDE(and other QT desktop environments)). Make sure to apply appropriate configuration to these default terminal apps according to the instructions given in the --- DE GUI Configuration --- above
     - Unneeded default XDG directories were removed(hidden)
     - PS1 variable was changed
 4. Only on MacOS
