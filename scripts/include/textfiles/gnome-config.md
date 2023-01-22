@@ -4,7 +4,7 @@
     * Cursor`(Adwaita/DMZ-Black)`
     * Icons`(Adwaita)`
 * Keyboard & mouse -> *On Laptop:*Mouse click emulation`(Area)`
-* Top Bar -> Everything`(OFF)`
+* Top Bar -> Seconds`(OFF)`, Week Numbers`(OFF)`
 * Windows Titlebars -> Titlebar Buttons -> Maximize`(ON)`, Minimize`(ON)`
 
 
@@ -12,18 +12,19 @@
 * Appearance
 	* Style`(Dark)`
 	* Backgorund`(Set a background)`
-* Notifications`(OFF)`
+* Notifications -> Lock Screen Notifications`(OFF)`
 * Search`(OFF)`
+* Multitasking -> Hot Corner`(OFF)`
 * Privacy -> Everything`(OFF)`, except: 
 	* Blank Screen Delay`(5 minutes)`
 	* Automatic Screen Lock`(ON)`
 	* Automatic Screen Lock Delay`(Screen Turns Off)`
 * Power
-	* Automatic suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
-	* Screen Blank`(5 minutes)`
 	* Dim Screen`(ON)`
+	* Screen Blank`(5 minutes)`
+	* Automatic suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
 	* Automatic Screen Brightness`(OFF)`
-* Keyboard -> Customize Shortcuts
+* Keyboard -> View and Customize Shortcuts
 	* Navigation
 		* Switch to workspace x`(Super + x/Super + Alt + x)`
 		* Move window to workspace x`(Super + Shift + x)`
