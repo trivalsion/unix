@@ -1,8 +1,9 @@
 # Scripts
 ## Using the repo
-1. Run the `scripts/main.sh` script and answer all of it's prompts to configure a UNIX system
-2. Check if everything `main.sh` prints out in "Done" section in it's output, was done by it
-3. Read and do other recommendations printed after script has finished(e.g. run dev.sh script)
+1. Clone this repository into any folder(usually the Downloads folder in user's home folder) with `git clone https://github.com/trivalsion/unix/
+2. Run the `scripts/main.sh` script and answer all of it's prompts to configure a UNIX system
+3. Check if everything `main.sh` prints out in "Done" section in it's output, was done by it
+4. Read and do other recommendations printed out by the main.sh script after it has finished(e.g. run dev.sh script)
 
 
 ## Repository Layout
