@@ -22,7 +22,7 @@ current_os="none"
 case $(uname -s) in
 	Linux*) current_os="linux" ;;
 	Darwin*) current_os="macos" ;;
-	*) read -p "OS: " current_os ;;
+	*) read -p "OS: " current_os ;; # "read -r" SHOULD NOT be used here or in other similar situations across this file because "read -p" is the only attribute which allows read to both output a string and ask for input
 esac
 
 # Get the Desktop Environment
@@ -55,7 +55,7 @@ fi
 
 ## Cross-platform ##
 # Make folders
-mkdir -p $dirs_list
+mkdir -p $dirs_list # double quotes SHOULD NOT be used around $dirs_list because it should expand to multiple folders and not just one
 
 # Change the shell colors
 touch ~/.bashrc
