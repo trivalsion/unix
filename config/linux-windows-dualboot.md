@@ -3,16 +3,16 @@
 1. Install windows
 2. Windows -> Win+R -> diskmgmt.msc -> Shrink Windows partition to free up space for linux(make sure that at least 10 GB free are left on windows parition, so if there are 50 needed for windows, leave 60 so 10 are free)
 3. Install Linux partition on freed up space
-* Fedora
-	1. Go to "Installation Destination"
-	2. Choose the disk where windows partition was shrinked to fit linux
-	3. Choose "Custom" option in "Storage Configuration"
-	4. Click "Done
-	5. Set "Encrypt my data" point to be On
-	6. Click "Create Automatically" option and make sure that windows' partitions were untouched
-	7. Click "Done"
-	* https://www.tecmint.com/install-fedora-with-windows-dual-boot/
-	* https://youtu.be/b0gFfm2p25E
+	* Fedora
+		1. Go to "Installation Destination"
+		2. Choose the disk where windows partition was shrinked to fit linux
+		3. Choose "Custom" option in "Storage Configuration"
+		4. Click "Done"
+		5. Set "Encrypt my data" point to be On
+		6. Click "Click here to create them automatically" button and make sure that windows's partitions weren't touched
+		7. Click "Done"
+		* https://www.tecmint.com/install-fedora-with-windows-dual-boot/
+		* https://youtu.be/b0gFfm2p25E
 
 ## DualBoot Fixes
 * Fixing problems in case Windows' EFI partition was accidentaly deleted, during installation of Linux, which is basically a Windows bootloader and it's deletion would prevent Windows from booting or showing up in the boot menu
