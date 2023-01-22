@@ -7,6 +7,7 @@ apps_list="nano python3 binutils clang make nasm" # firefox(install it with a se
 dirs_list="$HOME/git-repos $HOME/vm/iso $HOME/vm/vms"
 include_dir=./include
 textfiles_dir=$include_dir/textfiles
+output_info_file=./output_info.txt
 
 
 
@@ -64,18 +65,25 @@ echo 'PS1="\[\e[36m\][\[\e[m\]\[\e[34m\]\u\[\e[m\] \[\e[33m\]\w\[\e[m\] \[\e[32m
 
 
 ## Script End Messages ##
+# Information
+echo "
+--- Important Information ---
+1. This script has finished, reboot the computer to make sure everything works fine
+2. After rebooting the computer, open $output_info_file(e.g. by typing in the terminal - cat $output_info_file) located in this directory and follow instructions in it
+"
+
 # GUI Configurations
 if [[ "$current_de" != "none" && "$current_os" == "linux" ]]
     then
         clear
-        echo "--- DE GUI Configuration ---"
-        cat "$textfiles_dir"/$current_de-config.md
+        echo "--- DE GUI Configuration ---" >> "$output_info_file"
+        cat "$textfiles_dir"/"$current_de"-config.md >> "$output_info_file"
     else
         if [ "$current_os" == "macos" ]
             then
                 clear
-                echo "--- GUI Configuration ---"
-                cat "$textfiles_dir"/macos-config.md
+                echo "--- GUI Configuration ---" >> "$output_info_file"
+                cat "$textfiles_dir"/macos-config.md >> "$output_info_file"
         fi
 fi
 
@@ -102,4 +110,6 @@ echo "
     1. Install QEMU-KVM Virt-Manger
         - Fedora - sudo dnf install @virtualization
         - Ubuntu - sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
-    2. Install all the VMs through QEMU to the ~/vm/vms"
+    2. Install all the VMs through QEMU to the ~/vm/vms
+    
+Reboot the computer" >> "$output_info_file"
