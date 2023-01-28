@@ -110,4 +110,5 @@ echo "
         - Ubuntu - sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
     2. Install all the VMs through QEMU to the ~/vm/vms
     
-Reboot the computer" >> "$output_info_file"
+    
+Reboot the computer to make sure all of the settings have been applied" >> "$output_info_file"
