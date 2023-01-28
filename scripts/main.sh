@@ -66,22 +66,20 @@ echo 'PS1="\[\e[36m\][\[\e[m\]\[\e[34m\]\u\[\e[m\] \[\e[33m\]\w\[\e[m\] \[\e[32m
 
 ## Script End Messages ##
 # Information
+clear # clear all of the output of the code above, to not clutter the terminal
 echo "
 --- Important Information ---
 1. This script has finished, reboot the computer to make sure everything works fine
-2. After rebooting the computer, open $output_info_file(e.g. by typing in the terminal - cat $output_info_file) located in this directory and follow instructions in it
-"
+2. After rebooting the computer, open $output_info_file(e.g. by typing in the terminal - cat $output_info_file) located in this directory and follow instructions in it"
 
 # GUI Configurations
 if [[ "$current_de" != "none" && "$current_os" == "linux" ]]
     then
-        clear
         echo "--- DE GUI Configuration ---" >> "$output_info_file"
         cat "$textfiles_dir"/"$current_de"-config.md >> "$output_info_file"
     else
         if [ "$current_os" == "macos" ]
             then
-                clear
                 echo "--- GUI Configuration ---" >> "$output_info_file"
                 cat "$textfiles_dir"/macos-config.md >> "$output_info_file"
         fi
