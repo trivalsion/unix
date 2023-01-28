@@ -4,6 +4,8 @@
 
 # Setup git repos, if github does not allow password aunthentication use [this guide](https://github.com/trivalsion/programming/blob/master/documents/guides/git.md)
 cd $HOME/git-repos || exit
+mkdir -p github
+cd github || exit
 git clone https://github.com/trivalsion/programming
 git clone https://github.com/trivalsion/tos
 git clone https://github.com/trivalsion/unix
