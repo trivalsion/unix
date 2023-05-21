@@ -1,6 +1,7 @@
-# Problems caused by the lack of GPU drivers on linux
+# Issues caused by the lack of GPU drivers on linux
 * Laggy/sturdy cursor movement
 * Laggy animations in different or all parts of the system
+* Weird screen effects, stuttering and tearing during actions such as reboot, logout, shudown...
 
 
 
@@ -8,6 +9,7 @@
 * Information
 	* `Noveau` - nvidia drivers that are open-source community coded Nvidia drivers which don't support all GPU technologies and normally have worse performance, but they are included in the linux kernel and so they are installed automatically in most cases
 	* `Official Nvidia Drivers` - closed source official Nvidia linux drivers which have good performance and support all of the GPU's capabilites, but they need to be installed separately as they aren't included in distros or the kernel
+		* When using official NVIDIA drivers, on GNOME on the login screen before logging in(entering the password) go to bottom right corner -> configuration button -> Select "GNOME on Xorg option". This is needed because official NVIDIA drivers work very bad with wayland which would otherwise be used by default.
 
 
 ## On Fedora
