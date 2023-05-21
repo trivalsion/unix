@@ -41,7 +41,7 @@
 * Removable Media
 	* Set everything to `Do nothing`
 	* Never prompt or start programs on media insertion`(ON)`
-* Accessibility -> Enable Animations`(OFF)`
+* (If there are issues with animations being laggy or the computer being slow)Accessibility -> Enable Animations`(OFF)`
 * Default Applications`(Set default apps)`
 
 
