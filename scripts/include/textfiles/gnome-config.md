@@ -24,9 +24,13 @@
 	* Screen Blank`(5 minutes)`
 	* Automatic suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
 	* Automatic Screen Brightness`(OFF)`
+* (When using 2 monitors) Displays
+	* Multiple Displays(Join)
+	* Re-arrange displays into the position they are in, in the real life
+	* Primary Display(Set) 
 * Keyboard -> View and Customize Shortcuts
 	* Navigation
-		* Switch to workspace x`(Super + x/Super + Alt + x)`
+		* Switch to workspace x`(Super + Alt + x)`
 		* Move window to workspace x`(Super + Shift + x)`
 		* Hide all normal windows`(Super + D)`
 		* Move to workspace left/right`(Super + Alt + <-/->)`
@@ -46,14 +50,14 @@
 
 
 ## Extra
-1. Remove unneeded pre-installed gnome apps using gnome software app
-2. Pin most important applications to the taskbar
-3. In the launchpad/app menu, sort all apps into folders: put bloat into `bloat` folder, user installed apps into `apps` folder and other system stuff into `utilities`
-4. Gnome Terminal(gnome-terminal) - Burger Menu(3 lines) - Preferences
+1. Remove unneeded pre-installed gnome apps using GNOME "Software" app
+2. Unpin uneeded and pin the needed apps(Files, Firefox, Visual Studio Code, Terminal) to the Dash(taskbar)
+4. In the launchpad/app(Show Apps) menu, sort all apps into folders: put bloat into `bloat` folder, user installed apps into `apps` folder and other system stuff into `utilities`
+5. Gnome Terminal(gnome-terminal) - Burger Menu(3 lines) - Preferences
 	* Profiles - Default Profile - Rename(to "Personal")
 		* Colors
 			* Use colors from system theme(OFF)
 			* Built-in schemes(Green on black)
-5. By default the laptop shouldn't shutdown if it is closed when connected to power and monitor on most modern linux distros(even if it would shutdown in all other cases when the lid is closed), but if it does, then the "Gnome Tweaks -> General -> Suspend when laptop lid is closed`(ON)`" setting should be set to `Off` while working on a monitor with the laptop connected to power and closed
-* Starting from GNOME 40, add/remove extensions using gnome-extensions-app
-* To add desktop icons: Extensions App->Enable Extensions; [Install desktop icons extension](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 
+6. By default the laptop shouldn't shutdown if it is closed when connected to power and monitor on most modern linux distros(even if it would shutdown in all other cases when the lid is closed), but if it does, then the "Gnome Tweaks -> General -> Suspend when laptop lid is closed`(ON)`" setting should be set to `Off` while working on a monitor with the laptop connected to power and closed. Make sure to turn this option on if/after it was turned off so that the computer does not overheat in backpack/bag.
+* Starting from GNOME 40, extensions are managed using "gnome-extensions-app", download it and disable everything in it unless actively using extensions.
+	* To add desktop icons: Extensions App->Enable Extensions; [Install desktop icons extension](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 
