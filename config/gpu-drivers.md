@@ -34,20 +34,21 @@
 	* **Fix:**
 		* [Fedora Forum Link](https://discussion.fedoraproject.org/t/nvidia-driver-530-41-03-black-login-screen/80244)
 			* [Comment with the fix](https://discussion.fedoraproject.org/t/nvidia-driver-530-41-03-black-login-screen/80244/2)
-		1. ```sudo nano /etc/gdm/custom.config # open the config file that determines graphical display manger(login screen) being used```
+		1. ```sudo nano /etc/gdm/custom.conf # open the config file that determines graphical display manger(login screen) being used```
 		2. Uncomment the line "Wayland Enable=false" in the opened file, save it and close it
 		3. Reboot the computer
 	* **Issue:** usually if the above issue occurs there is also another issue of a phantom monitor(a monitor which shows up in settings, but does not exist in the real life, phantom monitor might cause issues as the system will interpret it as real and may for example open some applications on it) being present in the system.
 	* **Reason:** NVIDIA drivers issues
 	* **Fix:**
 		* [Reddit Post Link(The solution is in the post itself, NOT the comments)](https://www.reddit.com/r/Fedora/comments/jo19yq/fedora_33_empty_login_screen_after_nvidia_drivers/)
+		* This fix should be done from an X.org session, not Wayland, so first, reboot the computer after disabling Wayland with the first **Fix**
 		1. In terminal type ```xrandr -q```(xrandr might not be installed by default and will have to be installed with a package manager "sudo dnf install xrandr")
 		2. Above command will output a list of monitors, look through all monitors with the status "connected" and identify the identifier(the first thing in the line for each monitor e.g. HDMI-0 or None-1-1) of the phantom monitor(phantom monitor can be spotted by for example a weird identifier or a resolution different from existing monitors(usually 800x600))
 		3. List the Xorg config files with ```ls /etc/X11/xorg.conf.d/``` and if `01-display.conf` does not exist, create it with - ```sudo nano /etc/X11/xorg.conf.d/01-display.conf```(or call it 02-display.conf if 01 exists)
-		4. In the file opened above add
+		4. In the file opened above add(do NOT add the square brackets and what's inside them, substitute them with information)
 		```
 		Section "Monitor"
-		 Identifier "[identifier of the phantom monitor]"
+		 Identifier "[identifier of the phantom monitor(e.g. None-1-1)]"
 		 Option "Ignore" "true"
 		 Option "Enable" "false"
 		EndSection
