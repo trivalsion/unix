@@ -31,6 +31,7 @@
 * [**Valgrind**](https://valgrind.org/) - memory errors/leaks checker `(Lin)` [(Open-Source)](https://valgrind.org/downloads/repository.html)
 * [**PanDoc**](https://pandoc.org/) - converts between different WYSIWYM(What You See Is What You Mean, e.g. LaTeX) text formats and also converts these formats info PDF `(Win, Lin, Mac)` [(Open-Source)](https://pandoc.org/installing.html#compiling-from-source)
 
+
 ## Other
 * [**Fedora media writer**](https://getfedora.org/en/workstation/download/) - .iso(Operating System image) burning(writing) software `(Win, Lin, Mac)` [(Open-Source)](https://github.com/FedoraQt/MediaWriter)
 * [**VirtualBox**](https://www.virtualbox.org/) - virtualization(virtual machine) software `(Win, Lin, Mac)` [(Open-Source)](https://www.virtualbox.org/wiki/Build_instructions)
@@ -71,5 +72,3 @@
 	* [Debian](https://www.debian.org/)
 	* [Kubuntu](https://kubuntu.org/)
 * **Anonimity/Live** - [Tails](https://tails.boum.org/)
-
-
