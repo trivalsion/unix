@@ -22,7 +22,7 @@
 	* [Modern GPU's drivers installation guide section](https://rpmfusion.org/Howto/NVIDIA#Current_GeForce.2FQuadro.2FTesla)
 		* Make sure to run "sudo dnf update && sudo dnf autoremove" and then reboot the PC before installing the drivers
 		* If "sudo dnf install akmod-nvidia" driver installation step stops before it is finished or fails, just run it(the same command) again immediatly(!!! Without rebooting or clearing dnf cache !!!)	
-		* ONLY X(x.org) display server is supported by Nvidia proprietary drivers
+		* ONLY X(x.org) display server is, without issues, supported by NVIDIA proprietary drivers
 	* [Nvidia driver uninstallation guide section(returning to noveau)](https://rpmfusion.org/Howto/NVIDIA#Uninstall_the_NVIDIA_driver)
 		* [Recovering from Nvidia drivers after uninstalling](https://rpmfusion.org/Howto/NVIDIA#Recover_from_NVIDIA_installer)
 * [Unofficial unistallation guide](https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/3/)
