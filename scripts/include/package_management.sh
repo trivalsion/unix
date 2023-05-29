@@ -6,7 +6,7 @@ if [ "$current_pm" == apt ]
         # Update
         sudo apt -y update && sudo apt -y upgrade
 
-        # Install any dependencies
+        # Install any dependencies(needed for installations not from distribution's repositories, that require files to be donwloaded from the developers website(e.g. vscode))
         sudo apt -y install curl wget
 
         # VS code
@@ -22,7 +22,7 @@ if [ "$current_pm" == apt ]
         sudo apt-get install -y firefox
 
         # Apps with platform specific names
-        sudo apt install -y build-essential linux-headers-"$(uname -r)"
+        sudo apt install -y build-essential # install "make" and other GNU developer utilties
 
         # Remove ssh server to disable remote access to the computer
         sudo apt-get --purge -y remove openssh-server
@@ -42,7 +42,7 @@ if [ "$current_pm" == dnf ]
         # Update
         sudo dnf -y update
 
-        # Dependencies
+        # Install any dependencies(needed for installations not from distribution's repositories, that require files to be donwloaded from the developers website(e.g. vscode))
         sudo dnf -y install curl wget
 
         # RPM Fusion
@@ -60,7 +60,7 @@ if [ "$current_pm" == dnf ]
         sudo dnf install -y firefox
 
         # Apps with platform specific names
-        sudo dnf -y install @development-tools kernel-headers kernel-devel
+        sudo dnf -y install @development-tools # install "make" and other GNU utilites
 
         # Remove ssh server to disable remote access to the computer
         sudo dnf remove -y openssh-server
@@ -77,8 +77,8 @@ if [ "$current_pm" == brew ]
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
         # Install apps
-        brew install binutils diffutils nasm gdb nano                               # Programming
-        brew install cask mpv qemu geany                                            # Install Apps
-        brew cask install visual-studio-code transmission iterm2 virtualbox firefox # Install Cask Apps
+        brew install binutils diffutils nasm gdb nano # Install programming-related packages
+        brew install cask qemu # Install Apps
+        brew cask install visual-studio-code transmission virtualbox firefox # Install Cask Apps
         # Note: when installing VBox kernel kext should be allowed - Settings->Security->Allow Oracle...
 fi
