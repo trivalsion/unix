@@ -26,5 +26,6 @@
 
 ## Shell Script Checking Algorithm
 1. Check all the changed files .sh with [ShellCheck](https://www.shellcheck.net/) and fix errors that show up
+	* ShellCheck [developer's website](https://github.com/koalaman/shellcheck)
 2. Make sure that all global varibales used by included scripts are present
 3. Run the "scripts/main.sh" and any other script that was changed on a Linux VM and check if it does everything it is supposed to and that it does it correctly
