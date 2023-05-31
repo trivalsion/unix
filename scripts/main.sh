@@ -48,7 +48,7 @@ fi
 # Include package manager script or exit if it does not exist
 . "$include_dir"/package_management.sh || exit
 
-# Include platform specific scripts
+# Include platform/operating system-specific scripts
 . "$include_dir"/"$current_os"_config.sh || exit
 
 
