@@ -1,13 +1,20 @@
 # Includes the code for package managers configuration for main configurations script
 
-### Config for APT ###
+
+## Common Config ##
+apps_list="$apps_list curl wget" # add any dependencies(needed for installations not from distribution's repositories, that require files to be donwloaded from the developers website(e.g. vscode)) to the apps_list variable to be installed
+if [ "$current_de" == "gnome" ]
+    then
+        apps_list="$apps_list gnome-tweaks gnome-extensions-app"
+fi
+
+
+
+## Config for APT ##
 if [ "$current_pm" == apt ]
     then
         # Update
         sudo apt -y update && sudo apt -y upgrade
-
-        # Install any dependencies(needed for installations not from distribution's repositories, that require files to be donwloaded from the developers website(e.g. vscode))
-        sudo apt -y install curl wget
 
         # VS code
         curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -28,6 +35,8 @@ if [ "$current_pm" == apt ]
         sudo apt-get --purge -y remove openssh-server
 fi
 
+
+
 ## Config for DNF ##
 if [ "$current_pm" == dnf ]
     then
@@ -41,9 +50,6 @@ if [ "$current_pm" == dnf ]
 
         # Update
         sudo dnf -y update
-
-        # Install any dependencies(needed for installations not from distribution's repositories, that require files to be donwloaded from the developers website(e.g. vscode))
-        sudo dnf -y install curl wget
 
         # RPM Fusion
         sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -67,6 +73,8 @@ if [ "$current_pm" == dnf ]
         sudo dnf autoremove -y
 fi
 
+
+
 ## Config for Homebrew ##
 if [ "$current_pm" == brew ]
     then
@@ -79,6 +87,6 @@ if [ "$current_pm" == brew ]
         # Install apps
         brew install binutils diffutils nasm gdb nano # Install programming-related packages
         brew install cask qemu # Install Apps
-        brew cask install visual-studio-code transmission virtualbox firefox # Install Cask Apps
+        brew cask install visual-studio-code virtualbox firefox # Install Cask packages
         # Note: when installing VBox kernel kext should be allowed - Settings->Security->Allow Oracle...
 fi
