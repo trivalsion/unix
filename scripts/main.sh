@@ -55,11 +55,11 @@ fi
 
 ## Cross-platform ##
 # Make folders
-mkdir -p $dirs_list # double quotes SHOULD NOT be used around $dirs_list because it should expand to multiple folders and not just one
+mkdir -p $dirs_list # double quotes SHOULD NOT be used around $dirs_list because it should expand to multiple folders(seperated by spaces) and not just one
 
-# Change the shell colors
+# Change the bash shell prompt's colors
 touch ~/.bashrc
-echo 'PS1="\[\e[36m\][\[\e[m\]\[\e[34m\]\u\[\e[m\] \[\e[33m\]\w\[\e[m\] \[\e[32m\]\\$\[\e[m\]\[\e[36m\]]\[\e[m\] "' >> ~/.bashrc
+echo 'PS1="\[\e[36m\][\[\e[m\]\[\e[34m\]\u\[\e[m\] \[\e[33m\]\w\[\e[m\] \[\e[32m\]\\$\[\e[m\]\[\e[36m\]]\[\e[m\] "' >> ~/.bashrc # PS1 variable holds the configuration of the shell's prompt
 # Good PS1 Generator - https://ezprompt.net/
 
 
