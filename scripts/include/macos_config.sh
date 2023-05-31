@@ -1,20 +1,28 @@
-# Install the tools
+## Install the tools ##
 xcode-select --install
 
-# Configure git
+
+
+## Configure git ##
 git config --global user.name "eltertrias"
 git config --global user.email "eltertrias"
 
-# Change zsh to bash
+
+
+## Change zsh to bash ##
 brew install bash bash-completion
 sudo sh -c "echo '/usr/local/bin/bash' >> /etc/shells"
 chsh -s /usr/local/bin/bash && sudo chsh -s /usr/local/bin/bash
 
-# Edit Bash configs
+
+
+## Edit Bash configs ##
 touch "$HOME"/.bash_profile "$HOME"/.bashrc
 echo '. "$HOME"/.bashrc' >> "$HOME"/.bash_profile
 echo '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"' >> "$HOME"/.bash_profile
 echo 'export CLICOLOR=1' >> "$HOME"/.bashrc
+
+
 
 # echo "
 # ---------------------------------------------------------------------------------------------------------
