@@ -13,12 +13,12 @@ code --install-extension 13xforever.language-x86-64-assembly
 
 
 ## Gather information ##
-read -p "Platform: " platform_var
+read -p "Platform/Operating System(linux/macos): " platform_var
 vscode_config=./textfiles/vscode-config.json
 
 
 
-## Change the default .json configuration file to a custom one and use different file paths depending on the platform ##
+## Change the default .json configuration file of vscode to a custom one and use different file paths depending on the platform(as vscode configuration is located in different folders on different OSs) ##
 if [ $platform_var == macos ]
 then
 	cat "$vscode_config" > $HOME/Library/ApplicationSupport/Code/User/settings.json
