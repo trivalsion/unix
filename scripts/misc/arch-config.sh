@@ -1,4 +1,5 @@
 ## "Script" which tells how to install and configure an Arch Linux OS
+# !! THIS SCRIPT WAS NOT UPDATED IN A LONG TIME !!
 
 
 ### Installation ###
