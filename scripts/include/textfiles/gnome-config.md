@@ -59,5 +59,5 @@
 			* Use colors from system theme(OFF)
 			* Built-in schemes(Green on black)
 6. By default the laptop shouldn't shutdown if it is closed when connected to power and monitor on most modern linux distros(even if it would shutdown in all other cases when the lid is closed), but if it does, then the "Gnome Tweaks -> General -> Suspend when laptop lid is closed`(ON)`" setting should be set to `Off` while working on a monitor with the laptop connected to power and closed. Make sure to turn this option on if/after it was turned off so that the computer does not overheat in backpack/bag.
-* Starting from GNOME 40, extensions are managed using "gnome-extensions-app", download it and disable everything in it unless actively using extensions.
+* Starting from GNOME 40, extensions are managed using "gnome-extensions-app", disable everything in it unless extensions are absolutely required.
 	* To add desktop icons: Extensions App->Enable Extensions; [Install desktop icons extension](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 
