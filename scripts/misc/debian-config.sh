@@ -1,5 +1,6 @@
 #! /bin/bash
 ## Shell script which configures Debian Linux OS
+# !! THIS SCRIPT WAS NOT UPDATED IN A LONG TIME !!
 
 
 ## Post-Installation configuration ##
