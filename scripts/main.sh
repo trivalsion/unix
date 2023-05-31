@@ -22,7 +22,7 @@ current_os="none"
 case $(uname -s) in
 	Linux*) current_os="linux" ;;
 	Darwin*) current_os="macos" ;;
-	*) read -p "OS: " current_os ;; # "read -r" SHOULD NOT be used here or in other similar situations across this file because "read -p" is the only attribute which allows read to both output a string and ask for input
+	*) read -p "OS: " current_os ;; # "read -r" SHOULD NOT be used here or in other similar situations across this file because "read -p" is the only attribute which allows "read" utility to both output a string and ask for input at the same time
 esac
 
 # Get the Desktop Environment
@@ -109,11 +109,11 @@ echo "--- Check if all of these points were done by the script ---
 
 if [ "$current_os" == "linux" ]
     then
-        echo "$linux_final_message" >> "$output_info_file"
+        echo "$linux_final_output_message" >> "$output_info_file"
     else
         if [ "$current_os" == "macos" ]
 	    then
-	        echo "$macos_final_message" >> "$output_info_file"
+	        echo "$macos_final_output_message" >> "$output_info_file"
 	fi
 fi
 
