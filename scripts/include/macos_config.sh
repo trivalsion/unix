@@ -1,4 +1,4 @@
-## This script configures MacOS ##
+## This script configures MacOS
 ## !! THIS SCRIPT WAS NOT UPDATED IN A LONG TIME !!
 
 
