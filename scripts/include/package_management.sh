@@ -5,7 +5,7 @@
 apps_list="$apps_list curl wget" # add any dependencies(needed for installations not from distribution's repositories, that require files to be donwloaded from the developers website(e.g. vscode)) to the apps_list variable to be installed
 if [ "$current_de" == "gnome" ]
     then
-        apps_list="$apps_list gnome-tweaks gnome-extensions-app"
+        apps_list="$apps_list gnome-tweaks gnome-extensions-app" # add apps specific to the GNOME desktop environment to the apps list
 fi
 
 
