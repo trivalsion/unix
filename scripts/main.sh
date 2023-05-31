@@ -3,7 +3,7 @@
 
 
 ## Variables ##
-apps_list="nano python3 binutils clang make nasm" # firefox(install it with a seperate dnf/apt command as firefox package may have a different name and fail)
+apps_list="nano python3 clang binutils nasm make" # firefox - it is not present in this list because it's package name is different on different Linux distributions, so it is installed in the package manager specific section of package_management.sh included in this file
 dirs_list="$HOME/git-repos $HOME/vm/iso $HOME/vm/vms"
 include_dir=./include
 textfiles_dir=$include_dir/textfiles
@@ -86,19 +86,31 @@ if [[ "$current_de" != "none" && "$current_os" == "linux" ]]
 fi
 
 # Print the final message
-echo "
---- Check if all of these points were done by the script ---
-1. All of the following apps were installed by the package manager:
-    - On Linux - $apps_list vscode(some or all might not be installed if apt is used becuase it fails if any package is missing in repositories)
-    - On MacOS - binutils diffutils nasm gdb nano cask mpv qemu geany code transmission iterm2 vbox firefox
-2. Following directories were made - $dirs_list
-3. Only on Linux:
-    - No terminal application was installed, so instead the pre-installed terminal apps of the desktop environments should be used(Gnome Terminal on Gnome and Konsole on KDE(and other QT desktop environments)). Make sure to apply appropriate configuration to these default terminal apps according to the instructions given in the --- DE GUI Configuration --- section above
-    - Unneeded default XDG directories were removed(hidden)
-    - PS1 variable was changed
-4. Only on MacOS
-    - Username and email were changed for git
+linux_final_output_message="
+1. All of the following applications were installed by the package manager: $apps_list vscode
+    - No terminal application was installed by this script, so instead the desktop environment's pre-installed terminal application should be used(GNOME terminal on GNOME and Konsole on KDE(and other QT desktop environments))
+    - Some or all applications from the list above might not be installed if APT package manager is used becuase it fails if any package from the list provided to it is missing in it's repositories(for example due to one package in the list having been written incorrectly)
+2. Following directories were created: $dirs_list
+3. Unneeded, defautlt XDG directories(these are the default directories in the /home/user folder, e.g. Decuments, Music) were removed(hidden)
+4. PS1 variable was changes(bash prompt was made colorful)"
+macos_final_output_message="
+1. All of the following applications were installed by the package manager: cask nano binutils diffutils nasm gdb qemu code vbox firefox
+2. Following directories were created: $dirs_list
+3. User and email were changed for git"
 
+echo "--- Check if all of these points were done by the script ---" >> "$output_info_file"
+
+if [ "$current_os" == "linux" ]
+    then
+        echo "$linux_final_message" >> "$output_info_file"
+    else
+        if [ "$current_os" == "macos" ]
+	    then
+	        echo "$macos_final_message" >> "$output_info_file"
+	fi
+fi
+
+echo "
 --- To do manually ---
 1. Go to the scripts/apps in root of this repo and run the needed configuration scripts
 2. Go to scripts/misc in the root of this repo and run dev.sh if it is a software development machine
@@ -108,6 +120,7 @@ echo "
     1. Install QEMU-KVM Virt-Manger
         - Fedora - sudo dnf install @virtualization
         - Ubuntu - sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
+	- MacOS - VirtualBox should have been installed by this script
     2. Install all the VMs through QEMU to the ~/vm/vms
     
     
