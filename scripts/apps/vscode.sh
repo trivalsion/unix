@@ -19,14 +19,14 @@ vscode_config=./textfiles/vscode-config.json
 
 
 ## Change the default .json configuration file of vscode to a custom one and use different file paths depending on the platform(as vscode configuration is located in different folders on different OSs) ##
-if [ $platform_var == macos ]
+if [ "$platform_var" == macos ]
 then
-	cat "$vscode_config" > $HOME/Library/ApplicationSupport/Code/User/settings.json
+	cat "$vscode_config" > "$HOME"/Library/ApplicationSupport/Code/User/settings.json
 fi
 
-if [ $platform_var == linux ]
+if [ "$platform_var" == linux ]
 then
-	cat "$vscode_config" > $HOME/.config/Code/User/settings.json
+	cat "$vscode_config" > "$HOME"/.config/Code/User/settings.json
 fi
 
 
