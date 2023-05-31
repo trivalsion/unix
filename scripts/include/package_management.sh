@@ -25,7 +25,7 @@ if [ "$current_pm" == apt ]
         sudo apt-get install -y code
 
         # Apps(might not install becuase apt requires all of them to be in repos, otherwise it fails)
-        sudo apt-get install -y $apps_list
+        sudo apt-get install -y $apps_list # double quotes SHOULD NOT be used around $apps_list because it should expand to multiple package-names(seperated by spaces) and not just one
         sudo apt-get install -y firefox
 
         # Apps with platform specific names
@@ -62,7 +62,7 @@ if [ "$current_pm" == dnf ]
         sudo dnf install -y code
 
         # Apps
-        sudo dnf install -y $apps_list
+        sudo dnf install -y $apps_list # double quotes SHOULD NOT be used around $apps_list because it should expand to multiple package-names(seperated by spaces) and not just one
         sudo dnf install -y firefox
 
         # Apps with platform specific names
