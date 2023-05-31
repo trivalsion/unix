@@ -49,7 +49,7 @@ fi
 . "$include_dir"/package_management.sh || exit
 
 # Include platform specific scripts
-. "$include_dir"/"$current_os"_config.sh || exit                                                                                                                             # Distro/platform specific configs
+. "$include_dir"/"$current_os"_config.sh || exit
 
 
 
@@ -64,7 +64,7 @@ echo 'PS1="\[\e[36m\][\[\e[m\]\[\e[34m\]\u\[\e[m\] \[\e[33m\]\w\[\e[m\] \[\e[32m
 
 
 
-## Script End Messages ##
+## End of script messages ##
 # Information
 clear # clear all of the output of the code above, to not clutter the terminal
 echo "
@@ -85,20 +85,27 @@ if [[ "$current_de" != "none" && "$current_os" == "linux" ]]
         fi
 fi
 
-# Print the final message
-linux_final_output_message="
-1. All of the following applications were installed by the package manager: $apps_list vscode
+# Final message
+final_output_message_apps_list="none"
+if [ "$current_os" == "linux" ]
+    then
+    	final_output_message_apps_list="$apps_list vscode
     - No terminal application was installed by this script, so instead the desktop environment's pre-installed terminal application should be used(GNOME terminal on GNOME and Konsole on KDE(and other QT desktop environments))
-    - Some or all applications from the list above might not be installed if APT package manager is used becuase it fails if any package from the list provided to it is missing in it's repositories(for example due to one package in the list having been written incorrectly)
-2. Following directories were created: $dirs_list
-3. Unneeded, defautlt XDG directories(these are the default directories in the /home/user folder, e.g. Decuments, Music) were removed(hidden)
-4. PS1 variable was changes(bash prompt was made colorful)"
-macos_final_output_message="
-1. All of the following applications were installed by the package manager: cask nano binutils diffutils nasm gdb qemu code vbox firefox
-2. Following directories were created: $dirs_list
-3. User and email were changed for git"
+    - Some or all applications from the list above might not be installed if APT package manager is used becuase it fails if any package from the list provided to it is missing in it's repositories(for example due to one package in the list having been written incorrectly)"
+    else
+        if [ "$current_os" == "macos" ]
+	    then
+	        final_output_message_apps_list="cask nano binutils diffutils nasm gdb qemu code vbox firefox"
+	fi
+fi
 
-echo "--- Check if all of these points were done by the script ---" >> "$output_info_file"
+linux_final_output_message="3. Unneeded, defautlt XDG directories(these are the default directories in the /home/user folder, e.g. Decuments, Music) were removed(hidden)
+4. PS1 variable was changes(bash prompt was made colorful)"
+macos_final_output_message="3. User and email were changed for git"
+
+echo "--- Check if all of these points were done by the script ---
+1. All of the following applications were installed by the package manager: $final_output_message_apps_list
+2. Following directories were created: $dirs_list" >> "$output_info_file"
 
 if [ "$current_os" == "linux" ]
     then
