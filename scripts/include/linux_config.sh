@@ -1,4 +1,4 @@
-# Remove default XDG folders
+## Remove default XDG folders ##
 xdg_replacement_dir=".std_xdg_dirs" # when changing the name of the directory in this variable, make sure to also change all of it's occurances in ./textfiles/user-dirs.dirs file in this repository
 mkdir -p "$HOME"/"$xdg_replacement_dir" # create a directory to move the XDG directories to so that they do not bloat the root of home dir
 
