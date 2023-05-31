@@ -1,3 +1,7 @@
+## This script configures MacOS ##
+## !! THIS SCRIPT WAS NOT UPDATED IN A LONG TIME !!
+
+
 ## Install the tools ##
 xcode-select --install
 
