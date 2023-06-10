@@ -4,7 +4,7 @@
 
 ## Variables ##
 apps_list="nano python3 clang binutils nasm make" # firefox - it is not present in this list because it's package name is different on different Linux distributions, so it is installed in the package manager specific section of package_management.sh included in this file
-dirs_list="$HOME/git-repos $HOME/vm/iso $HOME/vm/vms"
+dirs_list="$HOME/git-repos $HOME/vm/iso $HOME/vm/vm"
 include_dir=./include
 textfiles_dir=$include_dir/textfiles
 output_info_file=./output_info.txt
@@ -103,7 +103,8 @@ linux_final_output_message="3. Unneeded, defautlt XDG directories(these are the 
 4. PS1 variable was changes(bash prompt was made colorful)"
 macos_final_output_message="3. User and email were changed for git"
 
-echo "--- Check if all of these points were done by the script ---
+echo "
+--- Check if all of these points were done by the script ---
 1. All of the following applications were installed by the package manager: $final_output_message_apps_list
 2. Following directories were created: $dirs_list" >> "$output_info_file"
 
@@ -128,7 +129,7 @@ echo "
         - Fedora - sudo dnf install @virtualization
         - Ubuntu - sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
 	- MacOS - VirtualBox should have been installed by this script
-    2. Install all the VMs through QEMU to the ~/vm/vms
+    2. Install all the VMs through QEMU to the ~/vm/vm
     
     
 Reboot the computer to make sure all of the settings have been applied" >> "$output_info_file"
