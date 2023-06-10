@@ -20,16 +20,16 @@ if [ "$current_pm" == apt ]
         curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
         sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
         sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-        sudo apt-get install -y apt-transport-https
-        sudo apt-get update -y
-        sudo apt-get install -y code
+        sudo apt-get -y install apt-transport-https
+        sudo apt-get -y update
+        sudo apt-get -y install code
 
         # Apps(might not install becuase apt requires all of them to be in repos, otherwise it fails)
-        sudo apt-get install -y $apps_list # double quotes SHOULD NOT be used around $apps_list because it should expand to multiple package-names(seperated by spaces) and not just one
-        sudo apt-get install -y firefox
+        sudo apt-get -y install $apps_list # double quotes SHOULD NOT be used around $apps_list because it should expand to multiple package-names(seperated by spaces) and not just one
+        sudo apt-get -y install firefox # firefox is on the seperate line here because it is pre-installed in most cases and apt-get fails if the package is already installed
 
         # Apps with platform specific names
-        sudo apt install -y build-essential # install "make" and other GNU developer utilties
+        sudo apt -y install build-essential # install "make" and other GNU developer utilties
 
         # Remove ssh server to disable remote access to the computer
         sudo apt-get --purge -y remove openssh-server
@@ -52,25 +52,25 @@ if [ "$current_pm" == dnf ]
         sudo dnf -y update
 
         # RPM Fusion
-        sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+        sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         sudo dnf -y update
 
         # VS code
         sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
         sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
         sudo dnf -y update
-        sudo dnf install -y code
+        sudo dnf -y install code
 
         # Apps
-        sudo dnf install -y $apps_list # double quotes SHOULD NOT be used around $apps_list because it should expand to multiple package-names(seperated by spaces) and not just one
-        sudo dnf install -y firefox
+        sudo dnf -y install $apps_list # double quotes SHOULD NOT be used around $apps_list because it should expand to multiple package-names(seperated by spaces) and not just one
+        sudo dnf -y install firefox
 
         # Apps with platform specific names
         sudo dnf -y install @development-tools # install "make" and other GNU utilites
 
         # Remove ssh server to disable remote access to the computer
-        sudo dnf remove -y openssh-server
-        sudo dnf autoremove -y
+        sudo dnf -y remove openssh-server
+        sudo dnf -y autoremove
 fi
 
 
