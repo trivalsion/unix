@@ -13,12 +13,14 @@
 	* Style`(Dark)`
 	* Backgorund`(Set a background)`
 * Notifications -> Lock Screen Notifications`(OFF)`
-* Search`(OFF)`
+* Search -> App Search`(OFF)`
 * Multitasking -> Hot Corner`(OFF)`
 * Privacy -> Everything`(OFF)`, except: 
-	* Blank Screen Delay`(5 minutes)`
-	* Automatic Screen Lock`(ON)`
-	* Automatic Screen Lock Delay`(Screen Turns Off)`
+	* Screen Lock 
+		* Blank Screen Delay`(5 minutes)`
+		* Automatic Screen Lock`(ON)`
+		* Automatic Screen Lock Delay`(Screen Turns Off)`
+* Sharing -> Everything(OFF)
 * Power
 	* Dim Screen`(ON)`
 	* Screen Blank`(5 minutes)`
@@ -46,13 +48,13 @@
 	* Set everything to `Do nothing`
 	* Never prompt or start programs on media insertion`(ON)`
 * (If there are issues with animations being laggy or the computer being slow)Accessibility -> Enable Animations`(OFF)`
-* Default Applications`(Set default apps)`
+* Default Apps`(Set default apps)`
 
 
-## Extra
+## Other
 1. Remove unneeded pre-installed gnome apps using GNOME "Software" app
 2. Unpin uneeded and pin the needed apps(Files, Firefox, Visual Studio Code, Terminal) to the Dash(taskbar)
-4. In the launchpad/app(Show Apps) menu, sort all apps into folders: put bloat into `bloat` folder, user installed apps into `apps` folder and other system stuff into `utilities`
+4. In the launchpad/app(Show Apps) menu, sort all apps into folders: put bloat into `Bloat` folder, user installed apps into `Apps` folder and other system stuff into `Utilities`
 5. Gnome Terminal(gnome-terminal) - Burger Menu(3 lines) - Preferences
 	* Profiles - Default Profile - Rename(to "Personal")
 		* Colors
