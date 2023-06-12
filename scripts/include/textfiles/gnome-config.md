@@ -22,18 +22,18 @@
 		* Automatic Screen Lock Delay`(Screen Turns Off)`
 * Sharing -> Everything(OFF)
 * Power
+	* Automatic Screen Brightness`(OFF)`
 	* Dim Screen`(ON)`
 	* Screen Blank`(5 minutes)`
 	* Automatic suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
-	* Automatic Screen Brightness`(OFF)`
 * (When using 2 monitors) Displays
 	* Multiple Displays(Join)
 	* Re-arrange displays into the position they are in, in the real life
 	* Primary Display(Set) 
 * Keyboard -> View and Customize Shortcuts
 	* Navigation
-		* Switch to workspace x`(Super + Alt + x)`
-		* Move window to workspace x`(Super + Shift + x)`
+		* Switch to workspace [number]`(Super + Alt + [number])`
+		* Move window to workspace [number]`(Super + Shift + [number])`
 		* Hide all normal windows`(Super + D)`
 		* Move to workspace left/right`(Super + Alt + <-/->)`
 	* Other(Not a settings category)
@@ -54,7 +54,7 @@
 ## Other
 1. Remove unneeded pre-installed gnome apps using GNOME "Software" app
 2. Unpin uneeded and pin the needed apps(Files, Firefox, Visual Studio Code, Terminal) to the Dash(taskbar)
-4. In the launchpad/app(Show Apps) menu, sort all apps into folders: put bloat into `Bloat` folder, user installed apps into `Apps` folder and other system stuff into `Utilities`
+4. In the launchpad/app(Show Apps) menu, sort all applications into folders: put bloat into `Bloat` folder, user installed apps into `Apps`, other system apps into `Utilities`, office apps into `Office`
 5. Gnome Terminal(gnome-terminal) - Burger Menu(3 lines) - Preferences
 	* Profiles - Default Profile - Rename(to "Personal")
 		* Colors
