@@ -25,7 +25,8 @@
 	* Automatic Screen Brightness`(OFF)`
 	* Dim Screen`(ON)`
 	* Screen Blank`(5 minutes)`
-	* Automatic suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
+	* Automatic Suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
+	* (On Laptop) Show Battery Percentage(ON)
 * (When using 2 monitors) Displays
 	* Multiple Displays(Join)
 	* Re-arrange displays into the position they are in, in the real life
