@@ -13,7 +13,12 @@ code --install-extension 13xforever.language-x86-64-assembly
 
 
 ## Gather information ##
-read -p "Platform/Operating System(linux/macos): " platform_var
+platform_var="none"
+case $(uname -s) in # Get the current Operating System
+	Linux*) platform_var="linux" ;;
+	Darwin*) platform_var="macos" ;;
+	*) read -p "OS: " platform_var ;; # "read -r" SHOULD NOT be used here or in other similar situations across this file because "read -p" is the only attribute which allows "read" utility to both output a string and ask for input at the same time
+esac
 vscode_config=./textfiles/vscode-config.json
 
 
