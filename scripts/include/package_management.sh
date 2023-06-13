@@ -31,7 +31,7 @@ if [ "$current_pm" == apt ]
         # Install apps with platform specific names
         sudo apt -y install build-essential # install "make" and other GNU developer utilties
 
-        # Remove ssh server to disable remote access to the computer
+        # Remove the ssh server to disable the ability of remote access to the computer(to prevent malicious unauthorized access)
         sudo apt-get --purge -y remove openssh-server
 fi
 
@@ -68,7 +68,7 @@ if [ "$current_pm" == dnf ]
         # Install apps with platform specific names
         sudo dnf -y install @development-tools # install "make" and other GNU utilites
 
-        # Remove ssh server to disable remote access to the computer
+        # Remove the ssh server to disable the ability of remote access to the computer(to prevent malicious unauthorized access)
         sudo dnf -y remove openssh-server
         sudo dnf -y autoremove
 fi
