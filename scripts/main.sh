@@ -1,5 +1,7 @@
 #! /bin/bash
-## Main UNIX-like OS configuration script which configures multiple different aspects of the system automatically to reduce user intervention needed for configuration. This script supports MacOS and Linux UNIX-like OSs.
+## Main UNIX-like OS configuration script which configures multiple different aspects of the system automatically to reduce user intervention needed for configuration. This script supports MacOS and Linux UNIX-like Operating Systems.
+## In the comments in the scripts, the words: apps, applications and packages will be used interchangeably in most cases.
+## In the comments in the script the words: folder, directory will be used interchangeably in most cases
 
 
 ## Variables ##
@@ -13,11 +15,11 @@ output_info_file=./output_info.txt
 
 ## Script setup ##
 # Folder existance checks
-[ -d "$include_dir" ] || exit
+[ -d "$include_dir" ] || exit # here "-d" checks if the directory(folder) exists and if it does not, the script finishes(exits)
 [ -d "$textfiles_dir" ] || exit
 
 # Get information about the system #
-# Get the OS
+# Get the name of the Operating System being used
 current_os="none"
 case $(uname -s) in
 	Linux*) current_os="linux" ;;
@@ -25,7 +27,7 @@ case $(uname -s) in
 	*) read -p "OS: " current_os ;; # "read -r" SHOULD NOT be used here or in other similar situations across this file because "read -p" is the only attribute which allows "read" utility to both output a string and ask for input at the same time
 esac
 
-# Get the Desktop Environment
+# Get the name of the Desktop Environment being used
 current_de="none"
 case "$DESKTOP_SESSION" in
 	gnome*) current_de="gnome" ;;
@@ -33,7 +35,7 @@ case "$DESKTOP_SESSION" in
 	*) read -p "Destktop Environment: " current_de ;;
 esac
 
-# Get the Package Manager
+# Get the name of the Package Manager being used
 current_pm="none"
 dnf --version && current_pm=dnf
 apt --version && current_pm=apt
@@ -45,7 +47,7 @@ fi
 
 
 ## System-specific Configuration
-# Include package manager script or exit if it does not exist
+# Include package_management.sh script that is responsible for installing and removing packages or exit if it does not exist
 . "$include_dir"/package_management.sh || exit
 
 # Include platform/operating system-specific scripts
@@ -54,7 +56,7 @@ fi
 
 
 ## Cross-platform ##
-# Make folders
+# Create folders
 mkdir -p $dirs_list # double quotes SHOULD NOT be used around $dirs_list because it should expand to multiple folders(seperated by spaces) and not just one
 
 # Change the bash shell prompt's colors
