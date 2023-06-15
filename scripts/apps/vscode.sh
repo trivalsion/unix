@@ -24,7 +24,7 @@ esac
 
 
 ## Change the default .json configuration file of vscode to a custom one and use different file paths depending on the platform(as vscode configuration is located in different folders on different OSs) ##
-## To open the json configuration file from Visual Studio Code application itself: VSCode App -> Shortcut "control" + "P"(On MacOS: command + P) -> Type in the opened prompt ">settings.json" -> Select "Preferences: Open User Settings (JSON)" in the drop-down menu
+## To open the json configuration file from Visual Studio Code application itself: VSCode App -> Keyboard shortcut "control" + "P"(On MacOS: command + P) -> Type in the opened prompt ">settings.json" -> Select "Preferences: Open User Settings (JSON)" in the drop-down menu
 if [ "$platform_var" == macos ]
 then
 	cat "$vscode_config" > "$HOME"/Library/ApplicationSupport/Code/User/settings.json
