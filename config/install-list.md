@@ -14,7 +14,7 @@
 	* Extra
 		* [Brave](https://brave.com/) `(Win, Lin, Mac)` [(Open-Source)](https://github.com/brave/) 
 		* [Chromium](https://www.chromium.org/) `(Lin)` [(Open-Source)](https://www.chromium.org/developers/how-tos/get-the-code)
-* **Code Editor** -
+* **Code Editor**
 	* [**Visual Studio Code(GUI, IDE, Electron)**](https://code.visualstudio.com/) `(Win, Lin, Mac)` [(Open-Source)](https://github.com/microsoft/vscode)
 	* [Nano(Terminal, Native - in C)](https://www.nano-editor.org/) - `(Lin, Mac)` [(Open-Source)](https://git.savannah.gnu.org/cgit/nano.git/log/)
  	* [Gedit(GUI, Native - in C)]() - `(Win, Lin, Mac)` [(Open-Source)]() 
