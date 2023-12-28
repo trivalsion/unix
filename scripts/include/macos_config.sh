@@ -35,3 +35,11 @@ echo 'export CLICOLOR=1' >> "$HOME"/.bashrc
 # 3. Try pushing commits to private repos to check if macos uses the nickname(eltertrias) and not the real name
 # ---------------------------------------------------------------------------------------------------------
 # "
+
+
+# Resetting a Mac
+# What to do before giving away Mac - https://support.apple.com/en-us/HT201065
+# Erase Mac and reset it to factory settings - https://support.apple.com/en-ca/HT212749
+#  Using Disk Utility to erase an Intel-based Mac - https://support.apple.com/en-us/HT208496
+#  Using Disk Utility to erase an Apple silicon-based Mac - https://support.apple.com/en-us/102506
+# Reinstalling MacOS - https://support.apple.com/en-ca/HT204904
