@@ -4,20 +4,22 @@
 * **Mac** - means that the application supports(can be installed on) MacOS
 
 
+
 # Base Utilities
 * **Multimedia Player** - [VLC](https://www.videolan.org/) `(Win, Lin, Mac)` [(Open-Source)](https://wiki.videolan.org/VLC_Source_code/)
 * **Office Suite** - [Libreoffice](https://www.libreoffice.org/) `(Win, Lin, Mac)` [(Open-Source)](https://www.libreoffice.org/about-us/source-code/)
 * **Web Browser**
+  	* [Firefox](https://www.mozilla.org/en-US/firefox/new/) `(Win, Lin, Mac)` [(Open-Source)](https://firefox-source-docs.mozilla.org/setup/index.html) 
 	* [Google Chrome](https://www.google.com/chrome/) `(Win, Lin, Mac)` (Proprietary)
-	* [Firefox](https://www.mozilla.org/en-US/firefox/new/) `(Win, Lin, Mac)` [(Open-Source)](https://firefox-source-docs.mozilla.org/setup/index.html)
 	* Extra
 		* [Brave](https://brave.com/) `(Win, Lin, Mac)` [(Open-Source)](https://github.com/brave/) 
 		* [Chromium](https://www.chromium.org/) `(Lin)` [(Open-Source)](https://www.chromium.org/developers/how-tos/get-the-code)
 * **Code Editor** -
-	* [**Visual Studio Code(GUI, IDE, Electron)**]() `(Win, Lin, Mac)` [(Open-Source)]()
-	* [Gedit(GUI, Native - in C)]() - `(Win, Lin, Mac)` [(Open-Source)]()
-	* [Nano(Terminal, Native - in C)]() - `(Win, Lin, Mac)` [(Open-Source)]()
+	* [**Visual Studio Code(GUI, IDE, Electron)**](https://code.visualstudio.com/) `(Win, Lin, Mac)` [(Open-Source)](https://github.com/microsoft/vscode)
+	* [Nano(Terminal, Native - in C)](https://www.nano-editor.org/) - `(Lin, Mac)` [(Open-Source)](https://git.savannah.gnu.org/cgit/nano.git/log/)
+ 	* [Gedit(GUI, Native - in C)]() - `(Win, Lin, Mac)` [(Open-Source)]() 
   	* [Geany(GUI, Native - in C)]() - `(Win, Lin, Mac)` [(Open-Source)]()
+
 
 
 # Tools
@@ -52,10 +54,13 @@
 * **PCB/Circuit Design** - [KiCAD](https://www.kicad.org/) `(Win, Lin, Mac)` [(Open-Source)](https://gitlab.com/kicad/code/kicad/)
 
 
+
 # Linux Specific Software
-* [**Terminator**](https://github.com/software-jessies-org/jessies) - terminal emulator [(Open-Source)](https://github.com/software-jessies-org/jessies)
+* [**GNOME Terminal**](https://help.gnome.org/users/gnome-terminal/stable/) - terminal emulator [(Open-Source)](https://gitlab.gnome.org/GNOME/gnome-terminal)
+	* [**Terminator**](https://github.com/software-jessies-org/jessies) - terminal emulator [(Open-Source)](https://github.com/software-jessies-org/jessies)
 * [**TLP(Not useful on fedora, in general only install if battery life is very bad)**](https://linrunner.de/tlp/) - background battery saver [(Open-Source)](https://linrunner.de/tlp/developers/source.html)
 * [**QEMU-KVM(GUI - Virt-manager)** ](https://virt-manager.org/)- kernel virtualization [(Open-Source)](https://virt-manager.org/download/)
+
 
 
 # Operating Systems
