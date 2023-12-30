@@ -122,11 +122,10 @@ fi
 
 echo "
 --- To do manually ---
-1. Go to the scripts/apps in root of this repo and run the needed configuration scripts
-2. Go to scripts/misc in the root of this repo and run dev.sh if it is a software development machine
-3. Configure the GUI using the information given in the --- DE GUI Configuration --- section above
-4. Remove unneeded pre-installed applications(e.g. gnome cheese)
-5. Virtualization
+1. Go to the scripts/configurators in the root of this repository and run needed configuration scripts
+2. Configure the GUI using the information given in --- DE GUI Configuration --- section above
+3. Remove unneeded pre-installed applications(e.g. gnome cheese)
+4. Virtualization (Optional)
     1. Install QEMU-KVM Virt-Manger
         - Fedora - sudo dnf install @virtualization
         - Ubuntu - sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
