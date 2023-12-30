@@ -55,12 +55,12 @@
 ## Miscellaneous
 1. Remove/Uninstall unneeded pre-installed gnome apps using GNOME "Software" app
 2. Unpin uneeded and pin the needed apps(Files, Firefox, Visual Studio Code, Terminal) to the Dash(taskbar)
-4. In launchpad/app(Show Apps) menu, sort all applications into folders: `Bloat`, `Apps`, `Utilities`, `Office`
-5. Gnome Terminal(gnome-terminal) - Burger Menu(3 lines) - Preferences
+3. In launchpad/app(Show Apps) menu, sort all applications into folders: `Bloat`, `Apps`, `Utilities`, `Office`
+4. Gnome Terminal(gnome-terminal) - Burger Menu(3 lines) - Preferences
 	* Profiles - Default Profile - Rename(to "Personal")
 		* Colors
 			* Use colors from system theme(OFF)
 			* Built-in schemes(Green on black)
-6. Starting from GNOME 40, extensions are managed using "gnome-extensions-app", disable everything in it unless extensions are absolutely required.
+5. Starting from GNOME 40, extensions are managed using "gnome-extensions-app", disable everything in it unless extensions are absolutely required.
 	* To add desktop icons: Extensions App -> Enable Extensions -> [Install desktop icons extension](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
 * `(On laptops running older GNOME versions:)` By default the laptop shouldn't shutdown if it is closed, as long as it is connected to power and a monitor(even if it would shutdown in all other cases when the lid is closed), but if it does, then "Gnome Tweaks -> General -> Suspend when laptop lid is closed`(ON)`" setting should be set to `Off` while working with a monitor. Make sure to turn this option back on after disconnecting the monitor so that the computer does not overheat in backpack/bag.
