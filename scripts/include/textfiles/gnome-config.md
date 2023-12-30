@@ -1,11 +1,10 @@
 ## Tweaks(Package/App name - `gnome-tweaks`)
-* General -> Suspend when laptop lid is closed`(ON)`
 * Appearance
     * Cursor`(Adwaita/DMZ-Black)`
     * Icons`(Adwaita)`
-* Keyboard & mouse -> *On Laptop:*Mouse click emulation`(Area)`
-* Top Bar -> Seconds`(OFF)`, Week Numbers`(OFF)`
-* Windows Titlebars -> Titlebar Buttons -> Maximize`(ON)`, Minimize`(ON)`
+    * Legacy Applications`(Adwaita-dark)`
+* Mouse & Touchpad -> *(On Laptop:)* Mouse Click Emulation`(Area)`
+* Windows -> Maximize`(ON)`, Minimize`(ON)`
 
 
 ## Settings
@@ -27,10 +26,10 @@
 	* Screen Blank`(5 minutes)`
 	* Automatic Suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
 	* (On Laptop) Show Battery Percentage(ON)
-* (When using 2 monitors) Displays
-	* Multiple Displays(Join)
+* *(When using 2 monitors:)* Displays
+	* Multiple Displays`(Join)`
 	* Re-arrange displays into the position they are in, in the real life
-	* Primary Display(Set) 
+	* Primary Display`(Set)`
 * Keyboard -> View and Customize Shortcuts
 	* Navigation
 		* Switch to workspace [number]`(Super + Alt + [number])`
@@ -46,21 +45,22 @@
 		* gnome-terminal`(Ctrl + Alt + T)`
 		* gnome-system-monitor`(Ctrl + Shift + Esc)`
 * Removable Media
-	* Set everything to `Do nothing`
+	* Everything`(Do nothing)`
 	* Never prompt or start programs on media insertion`(ON)`
-* (If there are issues with animations being laggy or the computer being slow)Accessibility -> Enable Animations`(OFF)`
+* *(If there are issues with animations being laggy or the computer being slow:)* Accessibility -> Enable Animations`(OFF)`
 * Default Apps`(Set default apps)`
+* About -> Device Name`(Set)`
 
 
-## Other
-1. Remove unneeded pre-installed gnome apps using GNOME "Software" app
+## Miscellaneous
+1. Remove/Uninstall unneeded pre-installed gnome apps using GNOME "Software" app
 2. Unpin uneeded and pin the needed apps(Files, Firefox, Visual Studio Code, Terminal) to the Dash(taskbar)
-4. In the launchpad/app(Show Apps) menu, sort all applications into folders: put bloat into `Bloat` folder, user installed apps into `Apps`, other system apps into `Utilities`, office apps into `Office`
+4. In launchpad/app(Show Apps) menu, sort all applications into folders: `Bloat`, `Apps`, `Utilities`, `Office`
 5. Gnome Terminal(gnome-terminal) - Burger Menu(3 lines) - Preferences
 	* Profiles - Default Profile - Rename(to "Personal")
 		* Colors
 			* Use colors from system theme(OFF)
 			* Built-in schemes(Green on black)
-6. By default the laptop shouldn't shutdown if it is closed when connected to power and monitor on most modern linux distros(even if it would shutdown in all other cases when the lid is closed), but if it does, then the "Gnome Tweaks -> General -> Suspend when laptop lid is closed`(ON)`" setting should be set to `Off` while working on a monitor with the laptop connected to power and closed. Make sure to turn this option on if/after it was turned off so that the computer does not overheat in backpack/bag.
-* Starting from GNOME 40, extensions are managed using "gnome-extensions-app", disable everything in it unless extensions are absolutely required.
-	* To add desktop icons: Extensions App->Enable Extensions; [Install desktop icons extension](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 
+6. Starting from GNOME 40, extensions are managed using "gnome-extensions-app", disable everything in it unless extensions are absolutely required.
+	* To add desktop icons: Extensions App -> Enable Extensions -> [Install desktop icons extension](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
+* `(On laptops running older GNOME versions:)` By default the laptop shouldn't shutdown if it is closed, as long as it is connected to power and a monitor(even if it would shutdown in all other cases when the lid is closed), but if it does, then "Gnome Tweaks -> General -> Suspend when laptop lid is closed`(ON)`" setting should be set to `Off` while working with a monitor. Make sure to turn this option back on after disconnecting the monitor so that the computer does not overheat in backpack/bag.
