@@ -92,7 +92,7 @@ final_output_message_apps_list="none"
 if [ "$current_os" == "linux" ]
     then
     	final_output_message_apps_list="$apps_list vscode
-    - No terminal application was installed by this script, so instead the desktop environment's pre-installed terminal application should be used(GNOME terminal on GNOME and Konsole on KDE(and other QT desktop environments))
+    - No terminal emulator application was installed by this script, the desktop environment's pre-installed terminal emulator application should be used(GNOME terminal on GNOME and Konsole on KDE(and other QT desktop environments))
     - Some or all applications from the list above might not be installed if APT package manager is used becuase it fails if any package from the list provided to it is missing in it's repositories(for example due to one package in the list having been written incorrectly)"
     else
         if [ "$current_os" == "macos" ]
