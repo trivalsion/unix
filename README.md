@@ -1,17 +1,16 @@
 # Scripts
-## Using the repo
-1. Clone this repository into any folder(usually the Downloads folder in user's home folder) with `git clone https://github.com/trivalsion/unix/
-2. Run the `scripts/main.sh` script and answer all of it's prompts to configure a UNIX system
-3. Check if everything `main.sh` prints out in "Done" section in it's output, was done by it
-4. Read and do other recommendations printed out by the main.sh script after it has finished(e.g. run dev.sh script)
+## Using this repository(on a UNIX-like system)
+1. Clone this repository into any folder(usually the Downloads folder in user's home folder) with `git clone https://github.com/trivalsion/unix/`
+2. Run the `./scripts/main.sh` script and answer all of it's prompts, this script will configure a UNIX-like system
+3. Check if everything `main.sh` prints out in "Done" section of it's output, was done by it
+4. Read and do other recommendations printed out by the `main.sh` script after it has finished(e.g. run needed scripts in ./scripts/configurators)
 
 
 ## Repository Layout
-* `config` folder - contains notes telling about configuring different very specific parts of the system
-* `scripts` folder - contains scripts to configure the system
-  * `main.sh` file - the main shell script of this repo which is able to configures different unix systems(BSD, MacOS, Linux)
-  * `misc` folder - folder containing scripts for various different purposes
-  * `apps` folder - folder containing scripts to configure applications
+* `configuration` folder - contains guides describing manual configuration of different parts of the system that were not configured by the script
+* `scripts` folder - contains scripts that configure the system
+  * `main.sh` file - the main shell script of this repo which is able to configures different unix systems(e.g. Linux, MacOS)
+  * `configurators` folder - folder containing scripts to configure applications and the system beyond what `main.sh` had configured
 
 
 ## Script coding rules
