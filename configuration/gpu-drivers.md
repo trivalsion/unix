@@ -8,7 +8,9 @@
 	* **When using official NVIDIA drivers**, on GNOME on the login screen before logging in(entering the password) go to bottom right corner -> configuration button -> Select "GNOME on Xorg option". This is needed because official NVIDIA drivers currently work very badly with wayland which would otherwise be used by default.
 	
 	
-## Issues caused by the lack of GPU drivers on linux
+## Issues caused by the lack of proprietary NVIDIA GPU Drivers and require their installation to be fixed
+* Monitor displays the OS in lowest possible resolution with there being no way to increase it
+* Several monitors are plugged in, but only one turns on and displays an image
 * Laggy/sturdy cursor movement
 * Laggy animations in different or all parts of the system
 * Weird screen effects, stuttering and tearing during actions such as reboot, logout, shudown...
@@ -29,6 +31,8 @@
 
 
 ## Issue fixes
+* **Issue:** After installation of NVIDIA proprietary drivers and rebooting, the message "NVIDIA kernel module missing. Falling back to noveau." is displayed or the drivers just do not work with no such message displayed
+	* **Fix:** BIOS -> Secure Boot(OFF) 
 * **Issue:** when the computer turns on, the login screen is blank(grey or other default color of the login screen)
 	* **Reason:** The issue occurs because by default Wayland being is used for the login screen even if Xorg will be used after the login and official NVIDIA drivers have issues interacting with Wayland
 	* **Fix:**
