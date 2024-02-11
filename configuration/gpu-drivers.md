@@ -6,6 +6,7 @@
 * **Official NVIDIA Drivers** - closed source official Nvidia linux drivers which have good performance and support all of the GPU's capabilites, but they need to be installed separately as they aren't included in distros or the kernel
 	* To check wether NVIDIA drivers are currently installed and are used by the Linux: Terminal -> "lsmod | grep nvidia", this will probably give out a list of several modules, the presence of NVIDIA drivers will be confirmed if there would be a module named "nvidia" 
 	* **When using official NVIDIA drivers**, on GNOME on the login screen before logging in(entering the password) go to bottom right corner -> configuration button -> Select "GNOME on Xorg option". This is needed because official NVIDIA drivers currently work very badly with wayland which would otherwise be used by default.
+		* This step could be skipped on newer Linux distributions such as Fedora 35 or higher as Wayland could also be used with NVIDIA GPUs now 
 	
 	
 ## Issues caused by the lack of proprietary NVIDIA GPU Drivers and require their installation to be fixed
