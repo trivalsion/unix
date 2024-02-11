@@ -131,6 +131,8 @@ echo "
         - Ubuntu - sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
 	- MacOS - VirtualBox should have been installed by this script
     2. Install all the VMs through QEMU to the ~/vm/vm
-    
-    
+5. Change browser settigns according to browser-config.md
+* (If the computer contains an NVIDIA GPU) Install NVIDIA proprietary drivers using the guide in (root of this repo)/configuration/gpu-drivers.md
+
+
 Reboot the computer to make sure all of the settings have been applied" >> "$output_info_file"
