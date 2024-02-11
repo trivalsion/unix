@@ -21,11 +21,11 @@
 		* Automatic Screen Lock Delay`(Screen Turns Off)`
 * Sharing -> Everything(OFF)
 * Power
-	* Automatic Screen Brightness`(OFF)`
-	* Dim Screen`(ON)`
+	* *(On Laptop)* Automatic Screen Brightness`(OFF)`
+	* *(On Laptop)* Dim Screen`(ON)`
 	* Screen Blank`(5 minutes)`
-	* Automatic Suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: Off)`
-	* (On Laptop) Show Battery Percentage(ON)
+	* Automatic Suspend`(On Laptop: 15 minutes on Battery and 30 minutes when Plugged In; On Desktop: 1 hour)`
+	* *(On Laptop)* Show Battery Percentage(ON)
 * *(When using 2 monitors:)* Displays
 	* Multiple Displays`(Join)`
 	* Re-arrange displays into the position they are in, in the real life
